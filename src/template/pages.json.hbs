@@ -1,39 +1,23 @@
 {
   "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-    //#ifdef H5 || MP-WEIXIN
     {
       "path": "pages/home/index",
       "style": {
-        "navigationBarTitleText": "任务",
+        "navigationBarTitleText": "首页",
         "navigationBarBackgroundColor": "#ffffff",
         "navigationStyle": "custom"
       }
     },
+    {{#each list}}
     {
-      "path": "pages/worktable/index",
+      "path": "pages/{{name}}/index",
       "style": {
-        "navigationBarTitleText": "",
+        "navigationBarTitleText": "{{name}}",
+        "navigationBarBackgroundColor": "#ffffff",
         "navigationStyle": "custom"
       }
     },
-    {
-      "path": "pages/fail/index",
-      "style": {
-        "navigationBarTitleText": ""
-      }
-    }
-    // #endif
-    // #ifdef MP-WEIXIN
-    , {
-      "path": "pages/webview/index",
-      "style": {
-        "navigationBarTitleText": "",
-        "navigationStyle": "custom"
-      }
-    }
-    // #endif
-    //#ifdef H5
-    // #endif
+    {{/each}}
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
