@@ -1,0 +1,5 @@
+.tab-bar {position:fixed;bottom:0;width:100%;padding-bottom:0;padding-bottom:constant(safe-area-inset-bottom);padding-bottom:env(safe-area-inset-bottom);background:#FFF; font-family: "FZY4JW";box-shadow: 0px -2px 7px rgba(154, 175, 212, 0.093099);}
+.tab-bar-main{display:flex;height:98rpx}
+.tab-bar .tab-bar-item{flex:1;text-align:center;color:#B5B7BC;font-size:20rpx}
+.tab-bar .tab-bar-item .icon{width:64rpx;height:64rpx;margin:0 auto}
+.tab-bar .tab-bar-item-select{color:#202B43}

@@ -1,0 +1,103 @@
+{
+  "name": "uni-app-template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
+    "build:dev-h5": "cross-env VUE_APP_ENV=dev npm run build:h5",
+    "build:prod-h5": "cross-env VUE_APP_ENV=prod npm run build:h5",
+    "build:mp-weixin": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build",
+    "build:dev-mp-weixin": "cross-env VUE_APP_ENV=dev npm run build:mp-weixin",
+    "build:prod-mp-weixin": "cross-env VUE_APP_ENV=prod npm run build:mp-weixin",
+    "dev:h5": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-serve",
+    "dev:dev-h5": "cross-env VUE_APP_ENV=dev npm run dev:h5",
+    "dev:prod-h5": "cross-env VUE_APP_ENV=prod npm run dev:h5",
+    "dev:mp-weixin": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch",
+    "dev:dev-mp-weixin": "cross-env VUE_APP_ENV=dev npm run dev:mp-weixin",
+    "dev:prod-mp-weixin": "cross-env VUE_APP_ENV=prod npm run dev:mp-weixin",
+    "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@dcloudio/uni-app-plus": "^2.0.0-31420210305001",
+    "@dcloudio/uni-h5": "^2.0.0-31420210305001",
+    "@dcloudio/uni-helper-json": "*",
+    "@dcloudio/uni-mp-360": "^2.0.0-31420210305001",
+    "@dcloudio/uni-mp-alipay": "^2.0.0-31420210305001",
+    "@dcloudio/uni-mp-baidu": "^2.0.0-31420210305001",
+    "@dcloudio/uni-mp-qq": "^2.0.0-31420210305001",
+    "@dcloudio/uni-mp-toutiao": "^2.0.0-31420210305001",
+    "@dcloudio/uni-mp-vue": "^2.0.0-31420210305001",
+    "@dcloudio/uni-mp-weixin": "^2.0.0-31420210305001",
+    "@dcloudio/uni-quickapp-native": "^2.0.0-31420210305001",
+    "@dcloudio/uni-quickapp-webview": "^2.0.0-31420210305001",
+    "@dcloudio/uni-stat": "^2.0.0-31420210305001",
+    "@vue/shared": "^3.0.0",
+    "core-js": "^3.6.5",
+    "flyio": "^0.6.2",
+    "lodash": "^4.17.20",
+    "query-string": "5",
+    "regenerator-runtime": "^0.12.1",
+    "vue": "^2.6.12",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2",
+    "vuex": "^3.6.0",
+    "vuex-class": "^0.3.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-typescript": "^7.2.0",
+    "@dcloudio/types": "^2.0.23",
+    "@dcloudio/uni-automator": "^2.0.0-31420210305001",
+    "@dcloudio/uni-cli-shared": "^2.0.0-31420210305001",
+    "@dcloudio/uni-migration": "^2.0.0-31420210305001",
+    "@dcloudio/uni-template-compiler": "^2.0.0-31420210305001",
+    "@dcloudio/vue-cli-plugin-hbuilderx": "^2.0.0-31420210305001",
+    "@dcloudio/vue-cli-plugin-uni": "^2.0.0-31420210305001",
+    "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.0-31420210305001",
+    "@dcloudio/webpack-uni-mp-loader": "^2.0.0-31420210305001",
+    "@dcloudio/webpack-uni-pages-loader": "^2.0.0-31420210305001",
+    "@types/query-string": "5",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "^4.5.9",
+    "@vue/cli-plugin-typescript": "*",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-lodash": "^3.3.4",
+    "copy-webpack-plugin": "^5.1.2",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.16.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-vue": "^7.3.0",
+    "husky": "^4.3.6",
+    "jest": "^25.4.0",
+    "less": "^4.0.0",
+    "less-loader": "^7.1.0",
+    "lint-staged": "^10.5.3",
+    "mini-types": "*",
+    "miniprogram-api-typings": "*",
+    "postcss-comment": "^2.0.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "Android >= 5",
+    "ios >= 10"
+  ],
+  "uni-app": {
+    "scripts": {}
+  }
+}

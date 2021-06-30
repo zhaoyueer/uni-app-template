@@ -1,0 +1,8 @@
+build:
+  image: node:10
+  script:
+    - yarn install --production=false
+    - node build/faas.js
+package:
+  artifact:
+    dir: dist/build/h5

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.documentElement.style.fontSize = document.documentElement.clientWidth / 20 + 'px'
+    })
+    var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'))
+    document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' + (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+  </script>
+  <link rel="stylesheet" href="<%= BASE_URL %>static/index.<%= VUE_APP_INDEX_CSS_HASH %>.css" />
+  <!-- prefetch -->
+  <link rel="dns-prefetch" href="//cdn.llscdn.com">
+  <link rel="dns-prefetch" href="//faas.llscdn.com">
+
+  <!-- preconnect -->
+  <link rel="preconnect" crossorigin href="//cdn.llscdn.com">
+  <link rel="preconnect" crossorigin href="//faas.llscdn.com">
+  <link rel="preload" as="font" crossorigin
+    href="https://cdn.llscdn.com/sprout/FZY4JW-6690ac921c340133415833f946589172.woff">
+</head>
+
+<style>
+  /* uni-app编译css无法解析非uni组件标签选择器, 因此放入全局样式中 */
+  video:focus {
+    outline: none;
+  }
+  video:active {
+    outline: none;
+  }
+</style>
+
+<body>
+  <noscript>
+    <strong>Please enable JavaScript to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <% if(process.env.VUE_APP_ENV !=='prod' ) {%>
+    <script src="https://cdn.llscdn.com/misc/eruda-4e583b64fc9db558b6e665bcb25680c9.js"></script>
+    <script>
+      eruda.init();
+    </script>
+    <% } %>
+      <!-- built files will be auto injected -->
+</body>
+
+</html>

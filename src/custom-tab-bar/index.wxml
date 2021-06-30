@@ -1,0 +1,15 @@
+<cover-view class="tab-bar">
+  <cover-view class="tab-bar-main">
+    <cover-view
+      wx:for="{{list}}"
+      wx:key="index"
+      data-path="{{item.pagePath}}"
+      data-key="{{item.key}}"
+      bind:tap="switchTab"
+      class="tab-bar-item {{ selected === item.key ? 'tab-bar-item-select' : '' }}"
+    >
+      <cover-image class="icon" src="{{selected === item.key ? item.selectedIconPath : item.iconPath}}"></cover-image>
+      <cover-view>{{item.text}}</cover-view>
+    </cover-view>
+  </cover-view>
+</cover-view>
